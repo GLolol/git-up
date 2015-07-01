@@ -1,0 +1,5 @@
+git-up (0.5.12-1) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: #789243)
+
+ -- James Lu <glolol1@hotmail.com>  Tue, 30 Jun 2015 20:36:29 -0700
