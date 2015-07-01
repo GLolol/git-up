@@ -3,14 +3,14 @@ Section: ruby
 Priority: optional
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Uploaders: James Lu <glolol1@hotmail.com>
-Build-Depends: debhelper (>= 7.0.50~),
+Build-Depends: debhelper (>= 9),
                gem2deb,
                ruby-colored (>= 1.2),
                ruby-grit
 Standards-Version: 3.9.6
 Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/git-up.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/git-up.git
-Homepage: http://github.com/aanand/git-up
+Homepage: http://aanandprasad.com/git-up/
 Testsuite: autopkgtest-pkg-ruby
 XS-Ruby-Versions: all
 
@@ -22,5 +22,14 @@ Depends: ruby | ruby-interpreter,
          ruby-grit,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: git command to fetch and rebase all branches
- <insert long description, indented with spaces>
+Description: fetch and rebase all locally-tracked remote Git branches
+ git pull has two problems:
+ .
+ * It merges upstream changes by default, when it's really more polite to
+ rebase over them, unless your collaborators enjoy a commit graph that looks
+ like bedhead.
+ * It only updates the branch you're currently on, which means git push will
+ shout at you for being behind on branches you don't particularly care about
+ right now.
+ .
+ git-up solves these problems once and for all.
