@@ -1,0 +1,89 @@
+--- !ruby/object:Gem::Specification
+name: git-up
+version: !ruby/object:Gem::Version
+  version: 0.5.12
+  prerelease: 
+platform: ruby
+authors:
+- Aanand Prasad
+- Elliot Crosby-McCullough
+- Adrian Irving-Beer
+- Joshua Wehner
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2013-07-23 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: colored
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '1.2'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '1.2'
+- !ruby/object:Gem::Dependency
+  name: grit
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: 
+email:
+- aanand.prasad@gmail.com
+- elliot.cm@gmail.com
+executables:
+- git-up
+extensions: []
+extra_rdoc_files: []
+files:
+- bin/git-up
+- lib/git-up/version.rb
+- lib/git-up.rb
+- man/git-up.1
+- LICENSE
+- README.md
+homepage: http://github.com/aanand/git-up
+licenses:
+- MIT
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.23
+signing_key: 
+specification_version: 3
+summary: git command to fetch and rebase all branches
+test_files: []
