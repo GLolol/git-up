@@ -25,7 +25,7 @@ Depends: ruby | ruby-interpreter,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: fetch and rebase all locally-tracked remote Git branches
- git pull has two problems:
+ git-up solves the following 'git pull' problems:
  .
  * It merges upstream changes by default, when it's really more polite to
  rebase over them, unless your collaborators enjoy a commit graph that looks
@@ -33,5 +33,3 @@ Description: fetch and rebase all locally-tracked remote Git branches
  * It only updates the branch you're currently on, which means git push will
  shout at you for being behind on branches you don't particularly care about
  right now.
- .
- git-up solves these problems once and for all.
