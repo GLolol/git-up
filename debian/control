@@ -17,10 +17,10 @@ XS-Ruby-Versions: all
 Package: git-up
 Architecture: all
 XB-Ruby-Versions: ${ruby:Versions}
-Depends: ruby | ruby-interpreter,
+Depends: git,
+         ruby | ruby-interpreter,
          ruby-colored (>= 1.2),
          ruby-grit,
-         git,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: fetch and rebase all locally-tracked remote Git branches
