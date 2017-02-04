@@ -1,3 +1,15 @@
+git-up (0.5.12-1utopia1) unstable; urgency=medium
+
+  * Utopia repository upload.
+  * Add patch from https://github.com/aanand/git-up/pull/100,
+    fixing repository detection with worktrees on Git 2.5+.
+    Thanks to Matan Rosenberg for the work!
+  * Update Vcs-* links and maintainer, as this isn't an official
+    Debian package anymore.
+  * Bump standards version to 3.9.8; no changes needed.
+
+ -- James Lu <bitflip3@gmail.com>  Fri, 03 Feb 2017 19:33:32 -0800
+
 git-up (0.5.12-1) unstable; urgency=medium
 
   * Initial release (Closes: #789243)
