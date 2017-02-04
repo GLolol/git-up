@@ -1,15 +1,14 @@
 Source: git-up
 Section: ruby
 Priority: optional
-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Uploaders: James Lu <bitflip3@gmail.com>
+Maintainer: James Lu <bitflip3@gmail.com>
 Build-Depends: debhelper (>= 9),
                gem2deb,
                ruby-colored (>= 1.2),
                ruby-grit
-Standards-Version: 3.9.7
-Vcs-Git: https://anonscm.debian.org/git/pkg-ruby-extras/git-up.git
-Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/git-up.git
+Standards-Version: 3.9.8
+Vcs-Git: https://github.com/utopia-repository/git-up
+Vcs-Browser: https://github.com/utopia-repository/git-up
 Homepage: http://aanandprasad.com/git-up/
 Testsuite: autopkgtest-pkg-ruby
 XS-Ruby-Versions: all
