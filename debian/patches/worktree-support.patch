@@ -1,0 +1,38 @@
+From d71c6d872d15548c7739158114748ec9c58e628a Mon Sep 17 00:00:00 2001
+From: Matan Rosenberg <matan129@users.noreply.github.com>
+Date: Tue, 4 Aug 2015 22:00:46 +0300
+Subject: [PATCH 1/2] Fix repo dir detection under in Git 2.5
+
+When having more than one worktree on GIt 2.5, we have to use `git rev-parse --git-common-dir` to get the correct, main repository `.git` directory (which may be unavailable under worktrees which are not the main ones)
+---
+ lib/git-up.rb | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+Index: git-up/lib/git-up.rb
+===================================================================
+--- git-up.orig/lib/git-up.rb	2017-02-03 19:44:11.103795137 -0800
++++ git-up/lib/git-up.rb	2017-02-03 19:44:11.103795137 -0800
+@@ -136,10 +136,16 @@
+   end
+ 
+   def get_repo
+-    repo_dir = `git rev-parse --show-toplevel`.chomp
++    repo_dir = `git rev-parse --git-common-dir`.chomp
+ 
+     if $? == 0
+-      Dir.chdir repo_dir
++      if repo_dir == ".git"  || repo_dir == "--git-common-dir"
++        repo_dir = `git rev-parse --show-toplevel`.chomp
++        Dir.chdir repo_dir
++      else
++        Dir.chdir repo_dir
++        Dir.chdir ".."
++      end
+       @repo = Grit::Repo.new(repo_dir)
+     else
+       raise GitError, "We don't seem to be in a git repository."
+@@ -344,4 +350,3 @@
+     `git --version`[/\d+(\.\d+)+/]
+   end
+ end
+-
